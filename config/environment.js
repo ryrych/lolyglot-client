@@ -19,6 +19,20 @@ module.exports = function(environment) {
     }
   };
 
+  ENV.contentSecurityPolicy = {
+    // Deny everything by default
+    'default-src': "'none'",
+
+    'script-src': ["'self'", "https://cdn.mxpnl.com"],
+    'font-src': ["'self'", "http://fonts.gstatic.com", "data: fonts.gstatic.com"],
+    'connect-src': ["'self'", "ws://*.localhost:49152", "localhost:*"],
+    'img-src': "'self'",
+    'style-src': ["'self'", "'unsafe-inline'", "http://fonts.googleapis.com"],
+
+    // `media-src` will be omitted from policy
+    'media-src': null
+  };
+
   if (environment === 'development') {
     // ENV.APP.LOG_RESOLVER = true;
     // ENV.APP.LOG_ACTIVE_GENERATION = true;
