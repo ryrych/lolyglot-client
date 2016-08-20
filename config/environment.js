@@ -16,7 +16,15 @@ module.exports = function(environment) {
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created
-    }
+    },
+    torii: {
+      providers: {
+        'doorkeeper-oauth2': {
+          apiKey:      'bf64b3c0a4db9869fdc6acbe1151597b10ad95395591646c957f04b73e36e806',
+          redirectUri: 'http://localhost:4200/login',
+        }
+      }
+    },
   };
 
   ENV.contentSecurityPolicy = {
