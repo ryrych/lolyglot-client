@@ -1,1 +1,5 @@
-<button {{action 'signIn'}}>Sign In</button>
+{{#if session.isAuthenticated}}
+  <button {{action 'signOut'}}>Sign Out</button>
+{{else}}
+  <button {{action 'signIn'}}>Sign In</button>
+{{/if}}
