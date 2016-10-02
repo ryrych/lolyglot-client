@@ -22,7 +22,11 @@ module.exports = function(environment) {
         'doorkeeper-oauth2': {
           apiKey:      'bf64b3c0a4db9869fdc6acbe1151597b10ad95395591646c957f04b73e36e806',
           redirectUri: 'http://localhost:4200/login',
-        }
+        },
+        'google-oauth2-bearer': {
+          apiKey:      '780242730420-itbpjd7busad7ajaqpamkte9bjvkjrti.apps.googleusercontent.com',
+          redirectUri: 'http://localhost:4200/auth/login',
+      },
       }
     },
   };

@@ -7,7 +7,7 @@ export default Ember.Component.extend({
   actions: {
     signIn() {
       this.get('session')
-        .authenticate('authenticator:torii', 'doorkeeper')
+        .authenticate('authenticator:torii', 'google')
         .catch(function(error) {
           throw new Error('authentication failed: '.concat(error));
         });
